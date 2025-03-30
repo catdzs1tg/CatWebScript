@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Hub - Roblox Script</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cat"></i>
+                <h1>Cat Hub</h1>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-toggle-icon"></i>
+            </div>
+        </header>
+        
+        <div class="main-content">
+            <div class="script-container">
+                <div class="script-header">
+                    <h2>Chest Farm Script</h2>
+                    <button id="copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                </div>
+                <pre><code id="script-code">getgenv().Cat = {
+    setting = {
+        ["Select Team"] = "Pirates", --// Select Pirates Or Marines
+        ["TweenSpeed"] = 350, --// Movement speed
+        ["Standing on the water"] = true, --// Standing on the water
+        ["Remove Notify Game"] = true,
+        ["Rejoin When kicked"] = true, --// Auto rejoin when you get kicked
+        ["Anti-Afk"] = true
+    },
+    ChestSettings = {
+        ["Start Farm Chest"] = true, --// Start Picking Chests
+        ["Esp Chest"] = true, --// ESP entire Chest
+        ["lock money"] = 1000000000, --// Amount of money to stop
+        ["Hop After Collected"] = "All", --// Enter the Number of Chests you want to pick up like "10" Or "All"
+        ["Stop When Have God's Chalice & Fist Of Darkness"] = true --// Stop When There's God's Chalice & Fist Of Darkness
+    },
+    Webhook = {
+        ["send Webhook"] = false, --// Send Webhook Auto Setup
+        ["Url Webhook"] = "", --// Link Url Webhook : https://discord.com/api/webhooks/xxxx
+        ["UserId"] = "" --// Id Discord You
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/catdzs1tg/Cathub/refs/heads/main/Chest.lua"))()
+</code></pre>
+            </div>
+            
+            <div class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Auto Farm Chests</li>
+                    <li><i class="fas fa-check-circle"></i> ESP Chest System</li>
+                    <li><i class="fas fa-check-circle"></i> Auto Server Hop</li>
+                    <li><i class="fas fa-check-circle"></i> Discord Webhook Support</li>
+                    <li><i class="fas fa-check-circle"></i> Anti-AFK System</li>
+                    <li><i class="fas fa-check-circle"></i> Configurable Settings</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="config-section">
+            <h2>Configuration Guide</h2>
+            <div class="config-card">
+                <h3><i class="fas fa-cog"></i> Basic Settings</h3>
+                <p>Team selection, movement speed, water walking, and anti-AFK settings.</p>
+            </div>
+            <div class="config-card">
+                <h3><i class="fas fa-treasure-chest"></i> Chest Settings</h3>
+                <p>Configure chest farming options, ESP, and auto-stop conditions.</p>
+            </div>
+            <div class="config-card">
+                <h3><i class="fab fa-discord"></i> Webhook Setup</h3>
+                <p>Link your Discord for notifications when valuable items are found.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Cat Hub | <span id="execution-status">Ready to execute</span></p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </footer>
+    </div>
+    
+    <div class="notification" id="copy-notification">
+        <i class="fas fa-check-circle"></i> Script copied to clipboard!
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
